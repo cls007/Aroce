@@ -25,7 +25,8 @@
     <string name="title_settings_fragment">设置</string>
     <string name="title_status_fragment">答题情况</string>
     <string name="settings_basic">基本设置</string>
-    <string name="settings_list_preference_title">考试类型选择</string>
+    <string name="settings_list_preference_title">考试类型</string>
+    <string name="settings_mode_list_preference_title">练习模式</string>
 
     <string name="title_activity_first_init">FirstInit</string>
     <string name="reset_confirm_dialog_message">清除所有答题数据?</string>

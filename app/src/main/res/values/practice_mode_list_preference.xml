@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="mode_list_entries">
+        <item>测试模式</item>
+        <item>读题模式</item>
+    </string-array>
+
+    <string-array name="mode_list_values">
+        <item>ExamMode</item>
+        <item>ReadMode</item>
+    </string-array>
+
+</resources>
