@@ -19,6 +19,7 @@ class PracticeFragment : Fragment() {
     lateinit var QuestionList: ArrayList<QuestionModel>
     lateinit var dbHelper: QuestionDBHelper
     lateinit var currLevel: String
+    lateinit var currPracticeMode: String
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -32,8 +33,13 @@ class PracticeFragment : Fragment() {
         activity.title = getString(R.string.title_practice_fragment)
 
         //start my code
+        //读取当前题目等级
         currLevel = PreferenceManager.getDefaultSharedPreferences(this.context)
                 .getString("list_preference_level", "LevelA")
+        //读取当前答题的模式
+        currPracticeMode = PreferenceManager.getDefaultSharedPreferences(this.context)
+                .getString("list_preference_mode", "ExamMode")
+        Log.d("Practice", "Current mode is " + currPracticeMode)
         //Log.d("Practice", "try to load db" + currLevel)
         dbHelper = QuestionDBHelper(this.context, currLevel)
         //读取所有的问题
@@ -45,7 +51,7 @@ class PracticeFragment : Fragment() {
                 activity.getSharedPreferences(AStatus.PREFS_NAME, 0)
                 .getString(currLevel + "currqid", "0")
                 .toInt()
-        //Log.d("practice", "currqid = " + AStatus.PracticeStatus.currentQid.toString())
+
         //set onclick listener
         buttonAnsA.setOnClickListener({v -> ansClick(v)})
         buttonAnsB.setOnClickListener({v -> ansClick(v)})
@@ -131,32 +137,42 @@ class PracticeFragment : Fragment() {
     //打乱选项答案
     private fun loadOptionsRandom(){
         val options = mutableListOf<String>()
-        options.add(QuestionList[AStatus.PracticeStatus.currentQid].ansA)
-        options.add(QuestionList[AStatus.PracticeStatus.currentQid].ansB)
-        options.add(QuestionList[AStatus.PracticeStatus.currentQid].ansC)
-        options.add(QuestionList[AStatus.PracticeStatus.currentQid].ansD)
-        for (i in 0 until options.size) {
-            val ranInt = Random().nextInt(4)
-            val tempS = options[ranInt]
-            options[ranInt] = options[0]
-            options[0] = tempS
-        }
-        //find correct answer
-        val mlist = listOf<String>("A", "B", "C", "D")
-        val reg = Regex("^\\[A\\].*")
-        val reg2 = Regex("^\\[[ABCD]\\]")
-        for (i in  0 until options.size){
-            if (reg.matches(options[i])){
-                correctAns = mlist[i]
+        if (currPracticeMode == "ExamMode") {
+            options.add(QuestionList[AStatus.PracticeStatus.currentQid].ansA)
+            options.add(QuestionList[AStatus.PracticeStatus.currentQid].ansB)
+            options.add(QuestionList[AStatus.PracticeStatus.currentQid].ansC)
+            options.add(QuestionList[AStatus.PracticeStatus.currentQid].ansD)
+
+            for (i in 0 until options.size) {
+                val ranInt = Random().nextInt(4)
+                val tempS = options[ranInt]
+                options[ranInt] = options[0]
+                options[0] = tempS
             }
-            //remove prefix
-            options[i] = reg2.replace(options[i], "")
+            //find correct answer
+            val mlist = listOf<String>("A", "B", "C", "D")
+            val reg = Regex("^\\[A\\].*")
+            val reg2 = Regex("^\\[[ABCD]\\]")
+            for (i in 0 until options.size) {
+                if (reg.matches(options[i])) {
+                    correctAns = mlist[i]
+                }
+                //remove prefix
+                options[i] = reg2.replace(options[i], "")
+            }
+            //load to UI
+            buttonAnsA.text = "[A]" + options[0]
+            buttonAnsB.text = "[B]" + options[1]
+            buttonAnsC.text = "[C]" + options[2]
+            buttonAnsD.text = "[D]" + options[3]
         }
-        //load to UI
-        buttonAnsA.text = "[A] " + options[0]
-        buttonAnsB.text = "[B] " + options[1]
-        buttonAnsC.text = "[C] " + options[2]
-        buttonAnsD.text = "[D] " + options[3]
+        else {
+            buttonAnsA.text = QuestionList[AStatus.PracticeStatus.currentQid].ansA
+            buttonAnsB.text = QuestionList[AStatus.PracticeStatus.currentQid].ansB
+            buttonAnsC.text = QuestionList[AStatus.PracticeStatus.currentQid].ansC
+            buttonAnsD.text = QuestionList[AStatus.PracticeStatus.currentQid].ansD
+        }
+
     }
     //取下一道题或者上一道题,本质是更改当前的Qid(位于AStatus中)
     fun fetchPreviousQuestion() {

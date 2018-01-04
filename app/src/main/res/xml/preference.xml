@@ -9,6 +9,12 @@
             android:entryValues="@array/list_values"
             android:key="list_preference_level"
             android:title="@string/settings_list_preference_title" />
+        <ListPreference
+            android:defaultValue="ExamMode"
+            android:entries="@array/mode_list_entries"
+            android:entryValues="@array/mode_list_values"
+            android:key="list_preference_mode"
+            android:title="@string/settings_mode_list_preference_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/settings_danger_area">
 
