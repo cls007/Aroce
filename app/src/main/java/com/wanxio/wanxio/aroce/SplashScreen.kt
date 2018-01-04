@@ -16,6 +16,7 @@ class SplashScreen : AppCompatActivity() {
                 .getBoolean("isFirstRun", true) == false){
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
     //在UI可见后加载数据库(此时可以显示初始化信息)
@@ -50,6 +51,7 @@ class SplashScreen : AppCompatActivity() {
             //go to mainacticity
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 
