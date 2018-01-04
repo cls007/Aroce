@@ -8,6 +8,7 @@
     <string name="navigation_drawer_practice">练习</string>
     <string name="navigation_drawer_status">答题情况</string>
     <string name="navigation_drawer_settings">设置</string>
+    <string name="navigation_drawer_about">关于</string>
 
     <string name="fragment_practice_lk">[LK....]</string>
     <string name="fragment_practice_schedule">curr / total</string>
@@ -32,5 +33,10 @@
     <string name="reset_confirm_dialog_message">清除所有答题数据?</string>
     <string name="reset_confirm_dialog_ok">确定</string>
     <string name="reset_confirm_dialog_cancel">取消</string>
+
+    <string name="about_fragment_message">程序中所有的题目(包括题目文本,选项以及图片)来自:\n
+        http://www.ragd.org/gdwxdportal/ArticleDetail.aspx?ColID=48ffc50aa41a489889fc25153c9434ec\u0026
+        Id=d5c213bfd82f4e4e8975ed7bf596253b
+    </string>
 
 </resources>

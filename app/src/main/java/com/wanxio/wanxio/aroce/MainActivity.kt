@@ -59,6 +59,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                         .commit()
             }
+            R.id.nav_about -> {
+                fragmentManager.beginTransaction()
+                        .replace(R.id.fragment_main, AboutFragment())
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                        .commit()
+            }
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)
