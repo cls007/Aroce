@@ -28,8 +28,8 @@
     <string name="settings_list_preference_title">考试类型选择</string>
 
     <string name="title_activity_first_init">FirstInit</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-
+    <string name="reset_confirm_dialog_message">清除所有答题数据?</string>
+    <string name="reset_confirm_dialog_ok">确定</string>
+    <string name="reset_confirm_dialog_cancel">取消</string>
 
 </resources>

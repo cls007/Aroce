@@ -14,7 +14,8 @@ class SettingsFragment : PreferenceFragment() {
         //这个设置项会清空数据库中的答题数据
         val restButton = preferenceManager.findPreference("RestApp")
         restButton.setOnPreferenceClickListener({
-            restDB()
+            //显示清空数据操作的提示
+            ResetConfirmDialogFragment().show(activity.fragmentManager, "ConfirmDialog")
             true
         })
 
@@ -31,13 +32,4 @@ class SettingsFragment : PreferenceFragment() {
         super.onResume()
     }
 
-
-    //执行清除操作的函数
-    private fun restDB() {
-        QuestionDBHelper(this.context, QuestionDBContract.Entry.TABLE_NAME_LEVEL_A).clearAllStatus()
-        QuestionDBHelper(this.context, QuestionDBContract.Entry.TABLE_NAME_LEVEL_B).clearAllStatus()
-        QuestionDBHelper(this.context, QuestionDBContract.Entry.TABLE_NAME_LEVEL_C).clearAllStatus()
-        AStatus.PracticeStatus.currentQid = 0
-    }
-
-}// Required empty public constructor
+}
