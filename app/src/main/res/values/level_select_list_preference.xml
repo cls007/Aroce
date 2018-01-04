@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="list_entries">
+        <item>A类考试</item>
+        <item>B类考试</item>
+        <item>C类考试</item>
+    </string-array>
+
+    <string-array name="list_values">
+        <item>LevelA</item>
+        <item>LevelB</item>
+        <item>LevelC</item>
+    </string-array>
+
+</resources>

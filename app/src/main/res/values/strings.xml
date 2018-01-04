@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">业余无线电台操作证考试练习</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- My string -->
+    <string name="navigation_drawer_practice">练习</string>
+    <string name="navigation_drawer_status">答题情况</string>
+    <string name="navigation_drawer_settings">设置</string>
+
+    <string name="fragment_practice_lk">[LK....]</string>
+    <string name="fragment_practice_schedule">curr / total</string>
+    <string name="fragment_practice_question_show_here">Question Show Here</string>
+    <string name="fragment_practice_image_show_here">Image show here if necessary</string>
+    <string name="fragment_practice_answer_a">[A] Answer</string>
+    <string name="fragment_practice_answer_b">[B] Answer</string>
+    <string name="fragment_practice_answer_c">[C] Answer</string>
+    <string name="fragment_practice_answer_d">[D] Answer</string>
+    <string name="fragment_practice_button_forward">前一题</string>
+    <string name="fragment_practice_button_afterward">后一题</string>
+    <string name="settings_rest_app">清除答题数据</string>
+    <string name="settings_danger_area">危险区域</string>
+    <string name="title_practice_fragment">练习</string>
+    <string name="title_settings_fragment">设置</string>
+    <string name="title_status_fragment">答题情况</string>
+    <string name="settings_basic">基本设置</string>
+    <string name="settings_list_preference_title">考试类型选择</string>
+
+    <string name="title_activity_first_init">FirstInit</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+</resources>

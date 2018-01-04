@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_practice"
+            android:layout_height="match_parent"
+            android:checked="true"
+            android:icon="@drawable/ic_menu_practice"
+            android:title="@string/navigation_drawer_practice" />
+        <item
+            android:id="@+id/nav_status"
+            android:icon="@drawable/ic_menu_status"
+            android:title="@string/navigation_drawer_status" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/navigation_drawer_settings" />
+    </group>
+
+</menu>

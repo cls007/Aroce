@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/settings_basic">
+
+        <ListPreference
+            android:defaultValue="LevelA"
+            android:entries="@array/list_entries"
+            android:entryValues="@array/list_values"
+            android:key="list_preference_level"
+            android:title="@string/settings_list_preference_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_danger_area">
+
+        <Preference
+            android:key="RestApp"
+            android:title="@string/settings_rest_app" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

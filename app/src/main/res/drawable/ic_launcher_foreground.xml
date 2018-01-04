@@ -1,0 +1,105 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:aapt="http://schemas.android.com/aapt"
+        android:width="108dp"
+        android:height="108dp"
+        android:viewportWidth="157.47824"
+        android:viewportHeight="157.4443">
+    <group android:translateX="2.5076153">
+        <path
+            android:pathData="m1.01,128.16c50.15,0 100.29,0 150.43,0"
+            android:strokeLineCap="round"
+            android:fillColor="#00000000"
+            android:strokeWidth="2"
+            android:strokeLineJoin="miter"
+            android:strokeAlpha="1">
+            <aapt:attr name="android:strokeColor">
+    <gradient 
+
+            android:startY="38731.3143896347"
+            android:startX="3624.8409918178713"
+            android:endY="38731.3143896347"
+            android:endX="26869.809906235354"
+            android:type="linear">
+                </gradient></aapt:attr></path>
+        <path
+            android:pathData="m59.29,110.95c-13.8,0 -36.22,0 -47.44,-3.74 -11.21,-3.74 -11.21,-11.23 -0,-14.97 11.21,-3.74 33.64,-3.74 58.78,-3.74 25.14,0 52.73,0 66.59,3.74 13.86,3.74 13.86,11.23 2.58,14.97 -11.28,3.74 -33.83,3.74 -47.69,3.74 -13.86,0 -19.02,0 -32.82,0z"
+            android:strokeLineCap="round"
+            android:fillColor="#00000000"
+            android:strokeWidth="1.70000005"
+            android:strokeLineJoin="miter"
+            android:strokeAlpha="1">
+            <aapt:attr name="android:strokeColor">
+    <gradient 
+
+            android:startY="34253.91008321686"
+            android:startX="4019.6550929923096"
+            android:endY="34253.91008321686"
+            android:endX="26311.802902921143"
+            android:type="linear">
+                </gradient></aapt:attr></path>
+        <path
+            android:pathData="m14.02,67.8c41.52,0 83.03,0 124.55,0"
+            android:strokeLineCap="round"
+            android:fillColor="#00000000"
+            android:strokeWidth="1.70000005"
+            android:strokeLineJoin="miter"
+            android:strokeAlpha="1">
+            <aapt:attr name="android:strokeColor">
+    <gradient 
+
+            android:startY="28438.4919611496"
+            android:startX="5630.945958676514"
+            android:endY="28438.4919611496"
+            android:endX="24882.727444544675"
+            android:type="linear">
+                </gradient></aapt:attr></path>
+        <path
+            android:pathData="m26.31,47.75c33.23,0 66.46,0 99.69,0"
+            android:strokeLineCap="round"
+            android:fillColor="#00000000"
+            android:strokeWidth="1.70000005"
+            android:strokeLineJoin="miter"
+            android:strokeAlpha="1">
+            <aapt:attr name="android:strokeColor">
+    <gradient 
+
+            android:startY="23918.033760276794"
+            android:startX="7505.387069494751"
+            android:endY="23918.033760276794"
+            android:endX="22967.53739186035"
+            android:type="linear">
+                </gradient></aapt:attr></path>
+        <path
+            android:pathData="m35.67,27.71c26.82,0 53.63,0 80.45,0"
+            android:strokeLineCap="round"
+            android:fillColor="#00000000"
+            android:strokeWidth="1.70000005"
+            android:strokeLineJoin="miter"
+            android:strokeAlpha="1">
+            <aapt:attr name="android:strokeColor">
+    <gradient 
+
+            android:startY="20331.735778771974"
+            android:startX="8931.592411657228"
+            android:endY="20331.735778771974"
+            android:endX="21459.836757836914"
+            android:type="linear">
+                </gradient></aapt:attr></path>
+        <path
+            android:pathData="m75.85,0.87c0,51.9 0,103.8 0,155.7"
+            android:strokeLineCap="round"
+            android:fillColor="#00000000"
+            android:strokeWidth="1.71754706"
+            android:strokeLineJoin="miter"
+            android:strokeAlpha="1">
+            <aapt:attr name="android:strokeColor">
+    <gradient 
+
+            android:startY="24381.068515471026"
+            android:startX="12750.645519627435"
+            android:endY="24381.068515471026"
+            android:endX="13012.533127765888"
+            android:type="linear">
+                </gradient></aapt:attr></path>
+    </group>
+</vector>
