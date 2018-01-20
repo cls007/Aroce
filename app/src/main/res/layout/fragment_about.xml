@@ -5,12 +5,9 @@
     tools:context="com.wanxio.wanxio.aroce.AboutFragment">
 
 
-    <TextView
-        android:id="@+id/textViewAbout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="7dp"
-        android:textAlignment="textStart"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp" />
+    <WebView
+        android:id="@+id/webviewAbout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </FrameLayout>

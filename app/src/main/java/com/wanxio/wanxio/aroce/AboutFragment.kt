@@ -21,7 +21,7 @@ class AboutFragment : Fragment() {
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         activity.title = "关于"
-        textViewAbout.text = resources.getString(R.string.about_fragment_message)
+        webviewAbout.loadUrl("file:///android_res/raw/about.html")
     }
 
 }// Required empty public constructor

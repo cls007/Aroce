@@ -8,7 +8,8 @@ import android.database.sqlite.SQLiteException
 import android.database.sqlite.SQLiteOpenHelper
 
 
-class QuestionDBHelper(context: Context, table: String ): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION ) {
+class QuestionDBHelper(context: Context, table: String ): SQLiteOpenHelper(context, DATABASE_NAME,
+        null, DATABASE_VERSION ) {
 
 //    init {
 //        TABLE_NAME = table
