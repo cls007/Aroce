@@ -11,6 +11,6 @@
         android:paddingTop="5dp"
         android:text="122"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@android:color/darker_gray"
         android:textSize="24sp" />
 </android.support.constraint.ConstraintLayout>
