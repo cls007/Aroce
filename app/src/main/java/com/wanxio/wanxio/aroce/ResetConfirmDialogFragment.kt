@@ -17,7 +17,6 @@ class ResetConfirmDialogFragment: DialogFragment(){
                     QuestionDBHelper(this.context, QuestionDBContract.Entry.TABLE_NAME_LEVEL_A).clearAllStatus()
                     QuestionDBHelper(this.context, QuestionDBContract.Entry.TABLE_NAME_LEVEL_B).clearAllStatus()
                     QuestionDBHelper(this.context, QuestionDBContract.Entry.TABLE_NAME_LEVEL_C).clearAllStatus()
-                    AStatus.PracticeStatus.currentQid = 0
                 })
                 .setNegativeButton(R.string.reset_confirm_dialog_cancel, {_, _ ->
                     Log.d("ResetConfirmDialog", "User click cancel")

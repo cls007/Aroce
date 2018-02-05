@@ -22,7 +22,7 @@ class StatusFragmentGridViewAdapter(context: Context): BaseAdapter() {
     private val dbhelper = QuestionDBHelper(context, currLevel)
 
     override fun getCount(): Int {
-        return dbhelper.readAllQuestion().size
+        return dbhelper.getNumOfItems()
     }
 
     override fun getItem(position: Int): Any {

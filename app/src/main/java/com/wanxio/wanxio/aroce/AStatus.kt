@@ -4,11 +4,4 @@ package com.wanxio.wanxio.aroce
 //权宜之计
 object AStatus {
     val PREFS_NAME = "MyPrefsFile"
-    class PracticeStatus{
-        companion object {
-            var currentQid = 0
-            var minQid = 0
-            var maxQid = 360
-        }
-    }
 }

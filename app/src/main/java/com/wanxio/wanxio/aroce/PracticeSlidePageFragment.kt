@@ -64,6 +64,7 @@ class PracticeSlidePageFragment : Fragment() {
         clearButtonColor()
         isSelected = false
         textViewLK.text = currQuestion.lk
+        textViewSchedule.text = "${currQid + 1} / ${((dbHelper.getNumOfItems() + 1)).toString()}"
         val idf = resources.getIdentifier(currQuestion.lk.toLowerCase(), "drawable", activity.packageName )
         if (idf != 0)
         {
