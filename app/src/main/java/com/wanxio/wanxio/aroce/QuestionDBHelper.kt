@@ -47,7 +47,7 @@ class QuestionDBHelper(context: Context, table: String ): SQLiteOpenHelper(conte
         writableDatabase.insert(TABLE_NAME, null, values)
     }
     //读取一个问题
-    fun readQuestion(questionid: String): ArrayList<QuestionModel>  {
+    fun readQuestion(questionid: String): QuestionModel  {
         val questions = ArrayList<QuestionModel>()
         var cursor: Cursor? = null
         try {
@@ -59,7 +59,7 @@ class QuestionDBHelper(context: Context, table: String ): SQLiteOpenHelper(conte
                     )
         }
         catch (e: SQLiteException){
-            return ArrayList<QuestionModel>()
+            return QuestionModel("", "","","","","","","")
         }
         if (cursor!!.moveToFirst()){
             while (cursor.isAfterLast == false){
@@ -78,7 +78,7 @@ class QuestionDBHelper(context: Context, table: String ): SQLiteOpenHelper(conte
             }
         }
         cursor.close()
-        return questions
+        return questions[0]
     }
     //读取所有的问题
     fun readAllQuestion(): ArrayList<QuestionModel>  {

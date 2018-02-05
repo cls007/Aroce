@@ -32,7 +32,7 @@ class StatusFragmentGridViewAdapter(context: Context): BaseAdapter() {
         val view: View = inflater.inflate(R.layout.status_grid_view_item, parent, false)
         val textView = view.findViewById<TextView>(R.id.textView_status)
         val q = dbhelper.readQuestion(position.toString())
-        when (q[q.lastIndex].status){
+        when (q.status){
             "-1" -> {
                 textView.setBackgroundResource(R.drawable.grid_view_item_error)
                 textView.setTextColor(Color.WHITE)
