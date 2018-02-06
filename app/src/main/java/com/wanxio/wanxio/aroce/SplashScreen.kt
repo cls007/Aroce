@@ -10,7 +10,7 @@ class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
-        Log.d("SplashScreen","SplashScreen ready to call main")
+        //Log.d("SplashScreen","SplashScreen ready to call main")
         //检查是否是第一次启动,是的话加载题库到数据库中
         if (getSharedPreferences(AStatus.PREFS_NAME, 0)
                 .getBoolean("isFirstRun", true) == false){
