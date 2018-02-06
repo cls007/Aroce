@@ -23,22 +23,33 @@ class PracticeFragment : Fragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        practiceViewPager.adapter = PracticeSlidePageAdapter(context, fragmentManager)
+        practiceViewPager.adapter = PracticeSlidePageAdapter(context, fragmentManager,
+                {//会在viewpage中选中正确答案的时候被调用
+                    practiceViewPager.currentItem = practiceViewPager.currentItem + 1
+                })
+        //恢复上次的进度
+        val currLevel = PreferenceManager.getDefaultSharedPreferences(this.context)
+                .getString("list_preference_level", "LevelA")
+        val pref = activity.getSharedPreferences(AStatus.PREFS_NAME, 0)
+
+        practiceViewPager.currentItem = pref.getInt(currLevel + "currqid", 0)
+        Log.d("Practice", "onViewCreated: currentItem = ${practiceViewPager.currentItem} ")
     }
 
-
-    //TODO: 进度保存功能~~
-//
+//    //在离开的时候保存当前等级的题目进度
 //    override fun onDetach() {
-//        //在离开的时候保存当前等级的题目进度
+//        Log.d("Practice", "onDetach")
 //        super.onDetach()
-//        //Log.d("practice", "detach now, saving currqid")
+//        //读取当前题目等级
+//        val currLevel = PreferenceManager.getDefaultSharedPreferences(this.context)
+//                .getString("list_preference_level", "LevelA")
 //        val settings = activity.getSharedPreferences(AStatus.PREFS_NAME, 0)
 //        val edit = settings.edit()
-//        edit.putString(currLevel + "currqid", AStatus.PracticeStatus.currentQid.toString())
+//        Log.d("Practice", practiceViewPager.currentItem.toString())
+//        edit.putInt(currLevel + "currqid", practiceViewPager.currentItem)
 //        edit.apply()
 //    }
-//
+
 
 
 }// Required empty public constructor

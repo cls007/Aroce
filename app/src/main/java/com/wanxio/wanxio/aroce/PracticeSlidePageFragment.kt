@@ -16,17 +16,23 @@ class PracticeSlidePageFragment : Fragment() {
 
     var isSelected = false
     var correctAns = "A"
-//    lateinit var QuestionList: ArrayList<QuestionModel>
     lateinit var currQuestion: QuestionModel
     lateinit var dbHelper: QuestionDBHelper
     lateinit var currLevel: String
     lateinit var currPracticeMode: String
     var currQid: Int = 0
 
+    private lateinit var onCorrectAnswerSelectedListener : () -> Unit
+
+    fun setOnCorrectAnswerSelectedListener(listener : () -> Unit) {
+        onCorrectAnswerSelectedListener = listener
+    }
+
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         return inflater!!.inflate(R.layout.fragment_practice_slide_page, container, false)
     }
+
 
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
@@ -49,6 +55,12 @@ class PracticeSlidePageFragment : Fragment() {
         buttonAnsD.setOnClickListener({v -> ansClick(v)})
         // display
         loadQuestionToUI()
+        //保存当前的进度
+        val settings = activity.getSharedPreferences(AStatus.PREFS_NAME, 0)
+        val edit = settings.edit()
+        Log.d("Practice", "save qid: ${currQid - 1}")
+        edit.putInt(currLevel + "currqid", currQid - 1)
+        edit.apply()
     }
 
     //清除按键的颜色
@@ -131,7 +143,7 @@ class PracticeSlidePageFragment : Fragment() {
                 object : CountDownTimer(300, 300) {
                     override fun onTick(millisUntilFinished: Long) {}
                     override fun onFinish() {
-                        //TODO: 自动跳转到下一个
+                        onCorrectAnswerSelectedListener()
                     }
                 }.start()
             }

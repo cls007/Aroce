@@ -38,7 +38,7 @@ class StatusFragment : Fragment() {
             val edit = settings.edit()
             val currLevel = PreferenceManager.getDefaultSharedPreferences(this.context)
                     .getString("list_preference_level", "LevelA")
-            edit.putString(currLevel + "currqid", position.toString())
+            edit.putInt(currLevel + "currqid", position)
             edit.apply()
 
             activity.nav_view.menu.findItem(R.id.nav_practice).isChecked = true
