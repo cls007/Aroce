@@ -1,16 +1,13 @@
 package com.wanxio.wanxio.aroce
 
-
 import android.app.Fragment
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.preference.PreferenceManager
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_practice.*
-import java.util.*
 
 class PracticeFragment : Fragment() {
 
@@ -36,19 +33,7 @@ class PracticeFragment : Fragment() {
         Log.d("Practice", "onViewCreated: currentItem = ${practiceViewPager.currentItem} ")
     }
 
-//    //在离开的时候保存当前等级的题目进度
-//    override fun onDetach() {
-//        Log.d("Practice", "onDetach")
-//        super.onDetach()
-//        //读取当前题目等级
-//        val currLevel = PreferenceManager.getDefaultSharedPreferences(this.context)
-//                .getString("list_preference_level", "LevelA")
-//        val settings = activity.getSharedPreferences(AStatus.PREFS_NAME, 0)
-//        val edit = settings.edit()
-//        Log.d("Practice", practiceViewPager.currentItem.toString())
-//        edit.putInt(currLevel + "currqid", practiceViewPager.currentItem)
-//        edit.apply()
-//    }
+
 
 
 
