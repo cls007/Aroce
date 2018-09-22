@@ -1,5 +1,7 @@
 # 业余无线电台操作证考试练习程序
 
+[点击下载APK程序](https://github.com/wanxio/Aroce/releases/download/v1.2.0/Aroce.apk)
+
 ## 题目来源
 
 程序中所有的题目(包括题目文本,选项以及图片)来自:
